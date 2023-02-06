@@ -1,0 +1,123 @@
+body {
+  margin: 0 auto;
+  padding: 0;
+  background: #8360c3;
+  background: -webkit-linear-gradient(to right, #2ebf91, #8360c3);
+  background: linear-gradient(to right, #2ebf91, #8360c3);
+  width: 100%;
+  height: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2 {
+  text-align: center;
+  color: #fff;
+  padding: 2rem;
+}
+
+.container {
+  margin-top: 5rem;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto 2rem;
+}
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 3rem;
+  border-radius: 2rem;
+}
+
+.container .input-box {
+  position: relative;
+}
+
+.container .input-box:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.container .input-box input {
+  position: relative;
+  padding: 17px;
+  width: 100%;
+  height: 60px;
+  font-size: 24px;
+  background-color: rgba(255, 255, 255, 0.2);
+  background-repeat: no-repeat;
+  background-position: 3% center;
+  transition: all 0.5s ease-in-out;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  filter: drop-shadow(0px 2px 6px rgba(0, 0, 0, 0.16));
+}
+
+.container .input-box input::placeholder {
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+}
+
+/* 
+  border-image
+*/
+
+.border-image .input-box input:hover,
+.border-image .input-box input:focus {
+  border: 1px solid transparent;
+  border-image: linear-gradient(to right, #000046 0%, #1cb5e0 100%);
+  border-image-slice: 1;
+  outline: none;
+}
+
+/* 
+  background-image
+ */
+
+.bg-image .input-box input:hover,
+.bg-image .input-box input:focus {
+  outline: none;
+  border: 1px solid transparent;
+  background-image: linear-gradient(#fff, #fff),
+    linear-gradient(to right, #000046 0%, #1cb5e0 100%);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+/* 
+  svg
+ */
+.gradient .input-box svg {
+  cursor: text;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.gradient .input-box svg rect {
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+}
+
+.gradient .input-box label:hover svg {
+  opacity: 1;
+}
+.gradient .input-box input:focus + label svg {
+  opacity: 1;
+}
+.gradient .input-box input:focus {
+  background-color: rgba(255, 255, 255, 0);
+  outline: none;
+  border: 0;
+}
+.gradient .input-box input:focus::placeholder {
+  color: #fff;
+}

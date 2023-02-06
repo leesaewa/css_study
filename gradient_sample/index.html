@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>border Gradation</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>Input Border Gradation</h1>
+
+    <h2>border-image</h2>
+    <form class="container border-image">
+      <fieldset>
+        <div class="input-box">
+          <input type="text" id="border" placeholder="ID" />
+          <label for="border"> </label>
+        </div>
+      </fieldset>
+    </form>
+
+    <h2>background-image</h2>
+    <form class="container bg-image">
+      <fieldset>
+        <div class="input-box">
+          <input type="text" id="border" placeholder="ID" />
+          <label for="bg"> </label>
+        </div>
+      </fieldset>
+    </form>
+
+    <h2>SVG</h2>
+    <form class="container gradient">
+      <fieldset>
+        <div class="input-box">
+          <input type="text" id="inputId" placeholder="ID" />
+          <label for="inputId">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient
+                  id="Gradient"
+                  x1="0"
+                  x2="300"
+                  y1="0"
+                  y2="0"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#000046" offset="0" />
+                  <stop stop-color="#1CB5E0" offset="1" />
+                </linearGradient>
+              </defs>
+              <rect
+                x="1"
+                y="1"
+                height="100%"
+                width="100%"
+                rx="12"
+                ry="12"
+                stroke-width="1"
+                fill="transparent"
+                stroke="url(#Gradient)"
+              />
+            </svg>
+          </label>
+        </div>
+
+        <div class="input-box">
+          <input type="text" id="inputPassword" placeholder="Password" />
+          <label for="inputPassword">
+            <svg xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient
+                  id="Gradient"
+                  x1="0"
+                  x2="300"
+                  y1="0"
+                  y2="0"
+                  gradientUnits="userSpaceOnUse"
+                >
+                  <stop stop-color="#00bdfd" offset="0" />
+                  <stop stop-color="#00fde8" offset="1" />
+                </linearGradient>
+              </defs>
+              <rect
+                x="1"
+                y="1"
+                height="100%"
+                width="100%"
+                rx="12"
+                ry="12"
+                stroke-width="1"
+                fill="transparent"
+                stroke="url(#Gradient)"
+              />
+            </svg>
+          </label>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
