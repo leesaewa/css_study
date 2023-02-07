@@ -57,6 +57,7 @@ Main Components
   height: 100%;
   margin: 0 40px;
   overflow: hidden;
+  z-index: 999;
 }
 
 .cd-horizontal-timeline .events-wrapper::after,
@@ -161,6 +162,7 @@ Main Components
   -webkit-transition: background-color 0.3s, border-color 0.3s;
   -moz-transition: background-color 0.3s, border-color 0.3s;
   transition: background-color 0.3s, border-color 0.3s;
+  z-index: 9999;
 }
 .no-touch .cd-horizontal-timeline .events a:hover::after {
   background-color: #ff3d7f;
@@ -356,32 +358,32 @@ li:nth-child(3) div {
 li:nth-child(3).selected div:nth-child(1)::before {
   content: "";
   position: absolute;
-  top: -174%;
-  left: 175%;
+  top: -183%;
+  left: 195%;
   width: 1px;
-  height: 500px;
+  height: 532px;
   background-color: #fff;
-  transform: rotate(82deg);
+  transform: rotate(83deg);
 }
 li:nth-child(3).selected div:nth-child(2)::before {
   content: "";
   position: absolute;
-  top: -114%;
-  left: 114%;
+  top: -115%;
+  left: 141%;
   width: 1px;
-  height: 300px;
+  height: 307px;
   background-color: #fff;
-  transform: rotate(76deg);
+  transform: rotate(77deg);
 }
 li:nth-child(3).selected div:nth-child(3)::before {
   content: "";
   position: absolute;
-  top: -41%;
-  left: 68%;
+  top: -60%;
+  left: 74%;
   width: 1px;
-  height: 67px;
+  height: 130px;
   background-color: #fff;
-  transform: rotate(-2deg);
+  transform: rotate(59deg);
 }
 
 .cd-horizontal-timeline .events-content li.enter-right,
